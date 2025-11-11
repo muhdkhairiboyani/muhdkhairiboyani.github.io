@@ -10,6 +10,7 @@
   <!-- Insert code here -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&display=swap" rel="stylesheet" />
 
+
   <!-- ! Internal styes -->
   <style>
     /* insert styles here */
@@ -57,6 +58,7 @@
       /* Padding 1200px */
       margin: 0 auto;
       /* Top & Bottom = 0px, Left & Right = Flushed */
+
     }
 
     /* Target Tag selector */
@@ -98,6 +100,7 @@
       color: var(--accent-color);
     }
 
+
     /* #landing section - id target selector */
     #landing {
       min-height: 80dvh;
@@ -112,6 +115,7 @@
       background-color: var(--light-bg-color);
       border-radius: 0 0 2rem 2rem;
       /* Top Left : Top Right : Bottom Left : Bottom Right */
+
     }
 
     .landing-content {
@@ -138,7 +142,6 @@
       font-weight: 700;
     }
 
-
     .landing-content p {
       font-size: 1.2rem;
       color: var(--secondary-color);
@@ -146,15 +149,18 @@
     }
 
     .cta-group a {
-        display: inline-block;
-        padding: 0.625rem 1.5625rem; /* Converted from 10px 25px */
-        margin: 0 0.625rem; /* Converted from 10px */
-        text-decoration: none;
-        border-radius: var(--border-radius);
-        font-weight: 600;
-        transition: all var(--transition-speed);
-        border: 0.125rem solid var(--primary-color); /* Converted from 2px */
-      }
+      display: inline-block;
+      padding: 0.625rem 1.5625rem;
+      /* Converted from 10px 25px */
+      margin: 0 0.625rem;
+      /* Converted from 10px */
+      text-decoration: none;
+      border-radius: var(--border-radius);
+      font-weight: 600;
+      transition: all var(--transition-speed);
+      border: 0.125rem solid var(--primary-color);
+      /* Converted from 2px */
+    }
 
     .primary-cta {
       background-color: var(--primary-color);
@@ -164,21 +170,365 @@
     .primary-cta:hover {
       background-color: var(--accent-color);
       border-color: var(--accent-color);
-      box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2); /* Converted from 0 4px 8px */;
-
+      box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+      /* Converted from 0 4px 8px */
     }
 
     .secondary-cta {
       background-color: var(--white);
       color: var(--primary-color);
-
     }
 
     .secondary-cta:hover {
       background-color: var(--primary-color);
       color: var(--white);
-      
     }
+
+
+    /* Style for About Me */
+    #about {
+      background-color: var(--white);
+    }
+
+    .about-grid {
+      display: flex;
+      gap: 2.5rem;
+      align-items: flex-start;
+    }
+
+    .about-image {
+      flex: 1;
+      text-align: center;
+    }
+
+    .about-image img {
+      width: 100%;
+      max-width: 18.75rem;
+      border-radius: var(--border-radius);
+    }
+
+    .about-text {
+      flex: 2;
+    }
+
+    .about-text h3 {
+      font-size: 2.8rem;
+      font-weight: lighter;
+      font-style: italic;
+      margin-bottom: 0.9375rem;
+    }
+
+    .info-card-container {
+      display: flex;
+      gap: 1.25rem;
+      margin: 1.5625rem 0;
+    }
+
+    .info-card {
+      flex: 1;
+      padding: 1.25rem;
+      border: 0.0625rem solid #ddd;
+      border-radius: var(--border-radius);
+      text-align: center;
+      background-color: var(--light-bg-color);
+      box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.05);
+      /* Converted from 0 2px 5px */
+    }
+
+    .info-card h4 {
+      font-size: 1.2rem;
+      color: var(--primary-color);
+      margin-bottom: 0.3125rem;
+    }
+
+    /* Style for Experience */
+    #experience {
+      background-color: var(--light-bg-color);
+    }
+
+    /*   .experience-grid {
+      display: flex;
+      gap: 2.5rem;
+      justify-content: center;
+    }   */
+
+    .experience-container {
+      display: flex;
+      gap: 2.5rem;
+      justify-content: center;
+    }
+
+    .experience-card {
+      flex: 1;
+      min-width: 18.75rem;
+      padding: 1.875rem;
+      background-color: var(--white);
+      border-radius: var(--border-radius);
+      box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
+
+    .experience-card h3 {
+      color: var(--primary-color);
+      margin-bottom: 1.5625rem;
+      border-bottom: 0.125rem solid var(--accent-color);
+      /* Green line under <h3> title */
+      padding-bottom: 0.625rem;
+      display: inline-block;
+    }
+
+    .skill-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      text-align: left;
+      margin-top: 0.9375rem;
+      /* Convert from 15px */
+    }
+
+    .skill-list li {
+      width: cal(50% - 0.625rem);
+      /* Convert from 10px */
+      margin-bottom: 0.9375rem;
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+    }
+
+    .skill-list li::before {
+      content: "•";
+      color: var(--accent-color);
+      font-size: 1.2rem;
+      margin-right: 0.625rem;
+      /* Convert from 10px */
+    }
+
+
+
+
+    /* Style for Projects */
+
+    .projects-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.875rem;
+      justify-content: center;
+    }
+
+    .projects-card {
+      flex-basis: calc(33.333% - 1.25rem);
+      min-width: 17.5rem;
+      background-color: var(--white);
+      border-radius: var(--border-radius);
+      box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform var(--transition-speed);
+      padding: 0;
+
+    }
+
+    .projects-card:hover {
+      transform: translateY(-0.3125rem);
+      /* Convert from -5px */
+    }
+
+    .projects-image {
+      width: 100%;
+      height: 12.5rem;
+      background-color: var(--light-bg-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--secondary-color);
+    }
+
+    .projects-details {
+      padding: 1.25rem;
+    }
+
+    .projects-details h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.625rem;
+      text-align: left;
+    }
+
+    .projects-details p {
+      color: var(--secondary-color);
+      margin-bottom: 0.9375rem;
+      font-size: 0.95rem;
+    }
+
+    .projects-links a {
+      display: inline-block;
+      margin-right: 0.9375rem;
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* Style for contacts */
+    #contact {
+      text-align: center;
+      background-color: var(--light-bg-color);
+    }
+
+    .contact p {
+      font-size: 1.2rem;
+      margin-bottom: 1.875rem;
+      color: var(--secondary-color);
+    }
+
+    .contact-links a {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.75rem 1.5625rem;
+      margin: 0 0.9375rem;
+      border: 0.125rem solid var(--primary-color);
+      border-radius: var(--border-radius);
+      text-decoration: none;
+      color: var(--primary-color);
+      font-weight: 600;
+      transition: all var(--transition-speed);
+    }
+
+    .contact-links a:hover {
+      background-color: var(--primary-color);
+      color: var(--white);
+    }
+
+    .contact-links a span {
+      margin-right: 0.625rem;
+      font-size: 1.2rem;
+    }
+
+    /* Style for footer */
+    #footer {
+      text-align: center;
+      padding: 1.25rem;
+      border-top: 0.0635rem solid #eee;
+      background-color: var(--white);
+    }
+
+    .footer-nav a {
+      margin: 0 0.625rem;
+      color: var(--secondary-color);
+      text-decoration: none;
+      transition: color var(--transition-speed);
+    }
+
+    .footer-nav a:hover {
+      color: var(--accent-color)
+    }
+
+    .copyright {
+      color: var(--secondary-color);
+      font-size: 0.8rem;
+      margin-top: 0.625rem;
+    }
+
+
+
+
+    /* Responsive styles for the web page Design */
+    @media(max-width: 37.5rem) {
+      /* Apply the styles here if the screen is <= 600px (16px x 37.5rem) */
+
+      .section-padding {
+        padding: 3.125rem 0.9375rem;
+      }
+
+      /* wrap <nav> bar */
+      nav {
+        flex-wrap: wrap;
+      }
+
+      .landing-content h1 {
+        font-size: 2.5rem;
+      }
+
+      /* set the CTA items in a Single Column */
+      .cta-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.625rem;
+      }
+
+      /* change link inside .cta-group */
+      .cta-group a {
+        margin: 0;
+        width: 100%;
+      }
+
+      /* TODO - DONE - add media query for CONTACT LINKS */
+      .contact-links a {
+        margin: 0.3125rem;
+        width: 100%;
+        justify-content: center;
+        border: 1px solid black;
+      }
+
+      .landing-content p {
+        font-size: 0.9rem;
+        color: var(--secondary-color);
+        margin-bottom: 1.25rem;
+      }
+
+      /* To CENTER the About image */
+      .about-image {
+        margin: 0 auto;
+      }
+
+      .about-text h3 {
+        text-align: center;
+        font-size: 2rem;
+      }
+
+      .about-text p {
+        text-align: center;
+      }
+    }
+
+
+
+    /* Responsive styles for the web page Design for 900px */
+    @media(max-width: 56.25rem) {
+
+      /* change <h2> size */
+      h2 {
+        font-size: 2rem;
+      }
+
+      /* change .about-grid to a Signle Column */
+      .about-grid {
+        flex-direction: column;
+      }
+
+      /* asdf */
+      .about-image {
+        margin-bottom: 1.875;
+      }
+
+      /* change .info-card-container */
+      .info-card-container {
+        flex-direction: column;
+      }
+
+      /* TODO - DONE - fix responsive layout for experience container */
+      .experience-container {
+        flex-direction: column;
+      }
+
+      /* TODO - DONE - fix responsive layout for skills-list li */
+      .skill-list li {
+        width: 100%;
+      }
+
+      .projects-card {
+        flex-basis: 100%;
+      }
+    }
+    
   </style>
 </head>
 
@@ -189,7 +539,7 @@
     <a href="#about">About</a>
     <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
-    <a href="#contacts">Contact</a>
+    <a href="#contact">Contact</a>
   </nav>
   <!-- ! End of nav (Main Navigation) -->
 
@@ -197,6 +547,7 @@
   <section id="landing" class="section-padding">
     <div class="landing-content">
       <!-- Create a placeholder for profile image -->
+      <!-- <img src="profilekhairi.jpg" alt="Profile Picture" class="profile-pic-large"> -->
       <img src="https://placehold.co/200x200/000000/FFFFFF?text=MK" alt="Profile Picture" class="profile-pic-large">
       <!-- Name and Designation -->
       <p>
@@ -219,86 +570,191 @@
   <!-- ! End of Landing section -->
 
   <!-- ! Start of About Me section -->
-  <section class="section-padding">
+  <section id="about" class="section-padding">
+
     <!-- Top section -->
     <h2>
       About Me
     </h2>
-
     <!-- Bottom section -->
-    <div>
-      <div>
-        <img src="https://placehold.co/600x600/CCCCCC/6c757d?text=My+Portrait" alt="My Portrait">
+
+    <div class="about-grid">
+
+      <div class="about-image">
+        <img src="https://placehold.co/600x600/CCCCCC/6c757d?text=Me" alt="My Portrait">
       </div>
 
-      <div>
-        <h3>
-          What do I believe in Full Stack Development
-        </h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quos eius cumque, illum non aperiam laborum
-          aspernatur blanditiis! Officiis, cum!
-        </p>
-      </div>
-
-      <div>
-        <div>
-          <h4>
-            7 years of experience
-          </h4>
-          <p>
-            <!-- Year of experience write up-->
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi nihil aut aliquam consequuntur molestias
-            molestiae a doloremque nobis atque voluptates. Fugiat similique omnis quibusdam fugit minima officiis
-            excepturi minus labore illo vitae error, sed, saepe ullam aliquam! Commodi velit quas adipisci tenetur dicta
-            error nostrum, iste rem ea praesentium porro!
-            <br><br>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam iste est quisquam asperiores aliquid
-            voluptas, reiciendis atque omnis qui repudiandae labore libero voluptatem corrupti suscipit, impedit
-            necessitatibus veniam pariatur reprehenderit ratione! Earum nobis quas culpa totam atque minima iste id eos
-            accusantium eius, deleniti impedit assumenda, pariatur, eligendi perferendis reprehenderit!
-          </p>
-        </div>
+      <div class="about-text">
 
         <div>
-          <h4>
-            Diploma in Mechatronics
-          </h4>
+          <div>
+            <h3>
+              Full stack dev.
+            </h3>
+            <p>
+              Lorem ipsum dolor sit am consectetur adipisicing elit. Animi quos eius cumque, illum non aperiam laborum
+              aspernatur blanditiis! Officiis!
+            </p>
+          </div>
+
+          <div class="info-card-container">
+            <div class="info-card">
+              <h4>
+                7 years of experience
+              </h4>
+              <p>
+                <!-- Year of experience write up-->
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti molestias eaque vitae natus
+                necessitatibus minus, rem pariatur ipsa nemo earum?
+              </p>
+            </div>
+
+            <div class="info-card">
+              <h4>
+                Diploma in Mechatronics
+              </h4>
+              <p>
+                <!-- Write up for Education-->
+                Education.
+              </p>
+            </div>
+
+          </div>
+
           <p>
-            <!-- Write up for Education-->
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, tempora dolores impedit harum dolore illo
-            natus dolorem debitis incidunt placeat sit numquam aperiam maxime inventore beatae error vero quos, eligendi
-            laboriosam sapiente! Minus vero pariatur quo voluptates quia consequuntur ab asperiores magni? In minus
-            possimus voluptatem saepe odit? Totam, dolores.
+            <!-- Personal quote -->
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, suscipit! Corporis magnam quidem
+            provident! Explicabo.
           </p>
+
         </div>
-
-      </div>
-
-      <p>
-        <!-- Personal quote -->
-      </p>
-
-    </div>
 
   </section>
   <!-- ! End of About Me section -->
 
   <!-- ! Start of Experience section -->
-  <!-- Insert HTML syntax here -->
+  <section id="experience" class="section-padding">
+    <h2>
+      Skills
+    </h2>
+
+    <div class="experience-container">
+      <div class="experience-card">
+        <h3>
+          Tech Stack
+        </h3>
+        <ul class="skill-list">
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>Javascript (ES6+)</li>
+          <li>React</li>
+          <li>Java</li>
+          <li>Springboot (Maven)</li>
+        </ul>
+      </div>
+
+      <div class="experience-card">
+        <h3>
+          Tools & Concepts
+        </h3>
+        <ul class="skill-list">
+          <li>Version Control (Git, Github)</li>
+          <li>Client-Server Artchitecture</li>
+          <li>API Development (Postman)</li>
+          <li>Unit Testing (Jest/jUnit)</li>
+          <li>Visual Studio Code</li>
+          <li>IntelliJ IDEA</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
   <!-- ! End of Experience section -->
 
   <!-- ! Start of Projects section -->
-  <!-- Insert HTML syntax here -->
+  <section id="projects" class="section-padding">
+    <h2>
+      Projects
+    </h2>
+
+    <div class="projects-grid">
+      <div class="projects-card">
+        <div class="projects-image"> Project 1 </div>
+        <div class="projects-details">
+          <h3>
+            Capstone project
+          </h3>
+          <p>
+            Developed a dynamic, product cart application with authentication and checkout features.
+          </p>
+          <div class="projects-links">
+            <a href="#">Demo</a>
+            <a href="#">Github Repo</a>
+          </div>
+        </div>
+
+        <div class="projects-card">
+          <div class="projects-image">Project 2</div>
+          <div class="projects-details">
+            <h3>
+              Online Portfolio
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, unde.
+            </p>
+            <div class="projects-links">
+              <a href="#">Demo</a>
+              <a href="#">Github Repo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects-card">
+          <div class="projects-image"> Project 3 </div>
+          <div class="projects-details">
+            <h3>
+              Personal Project
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, unde.
+            </p>
+            <div class="projects-links">
+              <a href="#">Demo</a>
+              <a href="#">Github Repo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
   <!-- ! End of Projects section -->
 
   <!-- ! Start of Contact section -->
-  <!-- Insert HTML syntax here -->
+  <section id="contact" class="section-padding">
+    <h2>Contact Me</h2>
+    <p>Lets connect!</p>
+    <div class="contact-links">
+      <a href="mailto:mikistudio21@gmail.com"> Email Me </a>
+      <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"
+        target="_blank"><span>X</span>Linkedin
+        Profile</a>
+    </div>
+  </section>
   <!-- ! End of Contact section -->
 
   <!-- ! Start of Footer -->
-  <!-- Insert HTML syntax here -->
+  <!-- <section id="footer" class="section-padding">   -->
+  <footer id="footer" class="section-padding">
+    <div class="footer-nav">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contacts</a>
+    </div>
+    <p class="copyright">&copy; 2025 Muhammad Khairi. All rights reserved.</p>
+  </footer>
   <!-- ! End of Footer -->
+
+
 </body>
 
 </html>

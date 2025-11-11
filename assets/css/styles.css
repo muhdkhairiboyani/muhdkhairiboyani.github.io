@@ -1,0 +1,520 @@
+    /* insert styles here */
+    /* CSS variables for easy theme management */
+    /* SINGLE SOURCE OF TRUTH */
+    :root {
+    --primary-color: #1a1a1a;
+    --secondary-color: #6c757d;
+    --accent-color: #4CAF50; /* A touch of green for accents */
+    --light-bg-color: #f8f9fa;
+    --white: #ffffff;
+    --border-radius: 0.5rem; /* Converted from 8px */
+    --transition-speed: 0.3s;
+    /* Optional: Set base font size for easier rem calculations (e.g., 62.5% = 10px) */
+    font-size: 100%; /* Default 16px. 1rem = 16px */
+    }
+
+    /* Base styling & font application */
+    /* RESET all elements in the web page */
+    * {
+      box-sizing: border-box;
+      margin: 10;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Lato", sans-serif;
+      line-height: 1.6;
+      color: var(--primary-color);
+      /* For text color in <body> except text for hyperlink */
+      background-color: var(--white);
+      scroll-behavior: smooth;
+    }
+
+    /* Reuseable Components */
+
+    /* Class selector has a DOT */
+    .section-padding {
+      padding: 5rem 1.25rem;
+      /* Top & Bottom= 5rem Left & Right= 1.25rem  converts to 80x20 px */
+      max-width: 75rem;
+      /* Padding 1200px */
+      margin: 0 auto;
+      /* Top & Bottom = 0px, Left & Right = Flushed */
+
+    }
+
+    /* Target Tag selector */
+    h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 3.75rem;
+      color: var(--primary-color);
+    }
+
+    /* Target Tag element <nav> */
+    nav {
+      display: flex;
+      justify-content: center;
+      /* To set horizontal alignment */
+      align-items: center;
+      /* To set vertical alignment */
+      padding: 0.9375rem 1.25rem;
+      /* Top & Bottom = 15px, Left & Right = 20px */
+      background-color: var(--white);
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
+      position: sticky;
+      /* To set it to STUCK at top of page (sticky, absolute OR relative) */
+      top: 0;
+      z-index: 1000;
+      /* To set nav bar above everything */
+    }
+
+    /* Descendant selector */
+    nav a {
+      margin: 0 0.9375rem;
+      text-decoration: none;
+      color: var(--primary-color);
+      font-weight: 600;
+      transition: color var(--transition-speed);
+    }
+
+    nav a:hover {
+      color: var(--accent-color);
+    }
+
+
+    /* #landing section - id target selector */
+    #landing {
+      min-height: 80dvh;
+      /* Takes up 8-% of the screen estate Dynamically (Dynamic View Height) */
+      display: flex;
+      justify-content: center;
+      /* Align HORIZONTALLY */
+      align-items: center;
+      /* Align content VERTICALLY*/
+      text-align: center;
+      /* Align all text center */
+      background-color: var(--light-bg-color);
+      border-radius: 0 0 2rem 2rem;
+      /* Top Left : Top Right : Bottom Left : Bottom Right */
+
+    }
+
+    .landing-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.25rem;
+      padding: 1.25rem;
+    }
+
+    .profile-pic-large {
+      width: 9.375rem;
+      /* 150px */
+      height: 9.375rem;
+      border-radius: 50%;
+      /* Default is a SQUARE. To become circle. add % TL TR BL BR */
+      object-fit: cover;
+      border: 0.2rem solid var(--primary-color);
+      margin-bottom: 0.625rem;
+    }
+
+    .landing-content h1 {
+      font-size: 3.75rem;
+      font-weight: 700;
+    }
+
+    .landing-content p {
+      font-size: 1.2rem;
+      color: var(--secondary-color);
+      margin-bottom: 1.25rem;
+    }
+
+    .cta-group a {
+      display: inline-block;
+      padding: 0.625rem 1.5625rem;
+      /* Converted from 10px 25px */
+      margin: 0 0.625rem;
+      /* Converted from 10px */
+      text-decoration: none;
+      border-radius: var(--border-radius);
+      font-weight: 600;
+      transition: all var(--transition-speed);
+      border: 0.125rem solid var(--primary-color);
+      /* Converted from 2px */
+    }
+
+    .primary-cta {
+      background-color: var(--primary-color);
+      color: var(--white);
+    }
+
+    .primary-cta:hover {
+      background-color: var(--accent-color);
+      border-color: var(--accent-color);
+      box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+      /* Converted from 0 4px 8px */
+    }
+
+    .secondary-cta {
+      background-color: var(--white);
+      color: var(--primary-color);
+    }
+
+    .secondary-cta:hover {
+      background-color: var(--primary-color);
+      color: var(--white);
+    }
+
+
+    /* Style for About Me */
+    #about {
+      background-color: var(--white);
+    }
+
+    .about-grid {
+      display: flex;
+      gap: 2.5rem;
+      align-items: flex-start;
+    }
+
+    .about-image {
+      flex: 1;
+      text-align: center;
+    }
+
+    .about-image img {
+      width: 100%;
+      max-width: 18.75rem;
+      border-radius: var(--border-radius);
+    }
+
+    .about-text {
+      flex: 2;
+    }
+
+    .about-text h3 {
+      font-size: 2.8rem;
+      font-weight: lighter;
+      font-style: italic;
+      margin-bottom: 0.9375rem;
+    }
+
+    .info-card-container {
+      display: flex;
+      gap: 1.25rem;
+      margin: 1.5625rem 0;
+    }
+
+    .info-card {
+      flex: 1;
+      padding: 1.25rem;
+      border: 0.0625rem solid #ddd;
+      border-radius: var(--border-radius);
+      text-align: center;
+      background-color: var(--light-bg-color);
+      box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.05);
+      /* Converted from 0 2px 5px */
+    }
+
+    .info-card h4 {
+      font-size: 1.2rem;
+      color: var(--primary-color);
+      margin-bottom: 0.3125rem;
+    }
+
+    /* Style for Experience */
+    #experience {
+      background-color: var(--light-bg-color);
+    }
+
+    /*   .experience-grid {
+      display: flex;
+      gap: 2.5rem;
+      justify-content: center;
+    }   */
+
+    .experience-container {
+      display: flex;
+      gap: 2.5rem;
+      justify-content: center;
+    }
+
+    .experience-card {
+      flex: 1;
+      min-width: 18.75rem;
+      padding: 1.875rem;
+      background-color: var(--white);
+      border-radius: var(--border-radius);
+      box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
+
+    .experience-card h3 {
+      color: var(--primary-color);
+      margin-bottom: 1.5625rem;
+      border-bottom: 0.125rem solid var(--accent-color);
+      /* Green line under <h3> title */
+      padding-bottom: 0.625rem;
+      display: inline-block;
+    }
+
+    .skill-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      text-align: left;
+      margin-top: 0.9375rem;
+      /* Convert from 15px */
+    }
+
+    .skill-list li {
+      width: cal(50% - 0.625rem);
+      /* Convert from 10px */
+      margin-bottom: 0.9375rem;
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+    }
+
+    .skill-list li::before {
+      content: "•";
+      color: var(--accent-color);
+      font-size: 1.2rem;
+      margin-right: 0.625rem;
+      /* Convert from 10px */
+    }
+
+
+
+
+    /* Style for Projects */
+    .projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.875rem; /* Converted from 30px */
+    justify-content: center;
+}
+
+.project-card {
+    flex-basis: calc(33.333% - 1.25rem); /* Converted from 20px */
+    min-width: 17.5rem; /* Converted from 280px */
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.1); /* Converted from 0 4px 15px */
+    overflow: hidden;
+    transition: transform var(--transition-speed);
+}
+
+.project-card .project-image {
+  /* background-color: black; */
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  object-fit: cover;
+  background-image: url("https://placehold.co/100x100/orange/white?text=Image Placeholder"
+ );
+}
+
+.project-card:hover {
+    transform: translateY(-0.3125rem); /* Converted from -5px */
+}
+
+.project-image {
+    width: 100%;
+    height: 12.5rem; /* Converted from 200px */
+    background-color: var(--light-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem; /* Converted from 1.5em */
+    color: var(--secondary-color);
+}
+
+.project-details {
+    padding: 1.25rem; /* Converted from 20px */
+}
+
+.project-details h3 {
+    font-size: 1.5rem; /* Converted from 1.5em */
+    margin-bottom: 0.625rem; /* Converted from 10px */
+    text-align: left;
+}
+
+.project-details p {
+    color: var(--secondary-color);
+    margin-bottom: 0.9375rem; /* Converted from 15px */
+    font-size: 0.95rem; /* Converted from 0.95em */
+}
+
+.project-links a {
+    display: inline-block;
+    margin-right: 0.9375rem; /* Converted from 15px */
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+    /* Style for contacts */
+    #contact {
+      text-align: center;
+      background-color: var(--light-bg-color);
+    }
+
+    .contact p {
+      font-size: 1.2rem;
+      margin-bottom: 1.875rem;
+      color: var(--secondary-color);
+    }
+
+    .contact-links a {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.75rem 1.5625rem;
+      margin: 0 0.9375rem;
+      border: 0.125rem solid var(--primary-color);
+      border-radius: var(--border-radius);
+      text-decoration: none;
+      color: var(--primary-color);
+      font-weight: 600;
+      transition: all var(--transition-speed);
+    }
+
+    .contact-links a:hover {
+      background-color: var(--primary-color);
+      color: var(--white);
+    }
+
+    .contact-links a span {
+      margin-right: 0.625rem;
+      font-size: 1.2rem;
+    }
+
+    /* Style for footer */
+    #footer {
+      text-align: center;
+      padding: 1.25rem;
+      border-top: 0.0635rem solid #eee;
+      background-color: var(--white);
+    }
+
+    .footer-nav a {
+      margin: 0 0.625rem;
+      color: var(--secondary-color);
+      text-decoration: none;
+      transition: color var(--transition-speed);
+    }
+
+    .footer-nav a:hover {
+      color: var(--accent-color)
+    }
+
+    .copyright {
+      color: var(--secondary-color);
+      font-size: 0.8rem;
+      margin-top: 0.625rem;
+    }
+
+
+
+
+    /* Responsive styles for the web page Design */
+    @media(max-width: 37.5rem) {
+      /* Apply the styles here if the screen is <= 600px (16px x 37.5rem) */
+
+      .section-padding {
+        padding: 3.125rem 0.9375rem;
+      }
+
+      /* wrap <nav> bar */
+      nav {
+        flex-wrap: wrap;
+      }
+
+      .landing-content h1 {
+        font-size: 2.5rem;
+      }
+
+      /* set the CTA items in a Single Column */
+      .cta-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.625rem;
+      }
+
+      /* change link inside .cta-group */
+      .cta-group a {
+        margin: 0;
+        width: 100%;
+      }
+
+      /* TODO - DONE - add media query for CONTACT LINKS */
+      .contact-links a {
+        margin: 0.3125rem;
+        width: 100%;
+        justify-content: center;
+        border: 1px solid black;
+      }
+
+      .landing-content p {
+        font-size: 0.9rem;
+        color: var(--secondary-color);
+        margin-bottom: 1.25rem;
+      }
+
+      /* To CENTER the About image */
+      .about-image {
+        margin: 0 auto;
+      }
+
+      .about-text h3 {
+        text-align: center;
+        font-size: 2rem;
+      }
+
+      .about-text p {
+        text-align: center;
+      }
+    }
+
+
+
+    /* Responsive styles for the web page Design for 900px */
+    @media(max-width: 56.25rem) {
+
+      /* change <h2> size */
+      h2 {
+        font-size: 2rem;
+      }
+
+      /* change .about-grid to a Signle Column */
+      .about-grid {
+        flex-direction: column;
+      }
+
+      /* asdf */
+      .about-image {
+        margin-bottom: 1.875;
+      }
+
+      /* change .info-card-container */
+      .info-card-container {
+        flex-direction: column;
+      }
+
+      /* TODO - DONE - fix responsive layout for experience container */
+      .experience-container {
+        flex-direction: column;
+      }
+
+      /* TODO - DONE - fix responsive layout for skills-list li */
+      .skill-list li {
+        width: 100%;
+      }
+
+      .projects-card {
+        flex-basis: 100%;
+      }
+    }

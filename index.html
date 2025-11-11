@@ -1,46 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio | Your Name here</title>
 
-    <!-- ! Apply fonts imported from Google Fonts -->
-    <!-- Insert code here -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Your Name here</title>
 
-    <!-- ! Internat styes -->
-    <style>
-        /* insert styles here */
-    </style>
-  </head>
+  <!-- ! Apply fonts imported from Google Fonts -->
+  <!-- Insert code here -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&display=swap" rel="stylesheet" />
 
-  <body>
-    <!-- ! Start of nav (Main Navigation) -->
-        <!-- Insert HTML syntax here -->
-    <!-- ! End of nav (Main Navigation) -->
 
-    <!-- ! Start of Landing section -->
-        <!-- Insert HTML syntax here -->
-    <!-- ! End of Landing section -->
+  <!-- ! External styes -->
+<link rel="stylesheet" href="css/styles.css">
 
-    <!-- ! Start of About Me section -->
-        <!-- Insert HTML syntax here -->
-    <!-- ! End of About Me section -->
+</head>
 
-    <!-- ! Start of Experience section -->
-        <!-- Insert HTML syntax here -->
-    <!-- ! End of Experience section -->
+<body>
+  <!-- ! Start of nav (Main Navigation) -->
+  <nav>
+    <a href="#landing">Home</a>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <!-- ! End of nav (Main Navigation) -->
 
-    <!-- ! Start of Projects section -->
-        <!-- Insert HTML syntax here -->
-    <!-- ! End of Projects section -->
+  <!-- ! Start of Landing section -->
+  <section id="landing" class="section-padding">
+    <div class="landing-content">
+      <!-- Create a placeholder for profile image -->
+      <!-- <img src="profilekhairi.jpg" alt="Profile Picture" class="profile-pic-large"> -->
+      <img src="https://placehold.co/200x200/000000/FFFFFF?text=MK" alt="Profile Picture" class="profile-pic-large">
+      <!-- Name and Designation -->
+      <p>
+        Hello, I&apos;m
+      </p>
+      <h1>
+        Muhammad Khairi
+      </h1>
+      <p>
+        A Junior Full Stack Developer | Mid-career Professional
+      </p>
 
-    <!-- ! Start of Contact section -->
-        <!-- Insert HTML syntax here -->
-    <!-- ! End of Contact section -->
+      <div class="cta-group">
+        <a class="secondary-cta" href="#contact">Contact Me</a>
+        <a class="primary-cta" href="#">Download CV</a>
+      </div>
 
-    <!-- ! Start of Footer -->
-        <!-- Insert HTML syntax here -->
-    <!-- ! End of Footer -->
-  </body>
+    </div>
+  </section>
+  <!-- ! End of Landing section -->
+
+  <!-- ! Start of About Me section -->
+  <section id="about" class="section-padding">
+
+    <!-- Top section -->
+    <h2>
+      About Me
+    </h2>
+    <!-- Bottom section -->
+
+    <div class="about-grid">
+
+      <div class="about-image">
+        <img src="https://placehold.co/600x600/CCCCCC/6c757d?text=Me" alt="My Portrait">
+      </div>
+
+      <div class="about-text">
+
+        <div>
+          <div>
+            <h3>
+              Full stack dev.
+            </h3>
+            <p>
+              Lorem ipsum dolor sit am consectetur adipisicing elit. Animi quos eius cumque, illum non aperiam laborum
+              aspernatur blanditiis! Officiis!
+            </p>
+          </div>
+
+          <div class="info-card-container">
+            <div class="info-card">
+              <h4>
+                7 years of experience
+              </h4>
+              <p>
+                <!-- Year of experience write up-->
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti molestias eaque vitae natus
+                necessitatibus minus, rem pariatur ipsa nemo earum?
+              </p>
+            </div>
+
+            <div class="info-card">
+              <h4>
+                Diploma in Mechatronics
+              </h4>
+              <p>
+                <!-- Write up for Education-->
+                Education.
+              </p>
+            </div>
+
+          </div>
+
+          <p>
+            <!-- Personal quote -->
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, suscipit! Corporis magnam quidem
+            provident! Explicabo.
+          </p>
+
+        </div>
+
+  </section>
+  <!-- ! End of About Me section -->
+
+  <!-- ! Start of Experience section -->
+  <section id="experience" class="section-padding">
+    <h2>
+      Skills
+    </h2>
+
+    <div class="experience-container">
+      <div class="experience-card">
+        <h3>
+          Tech Stack
+        </h3>
+        <ul class="skill-list">
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>Javascript (ES6+)</li>
+          <li>React</li>
+          <li>Java</li>
+          <li>Springboot (Maven)</li>
+        </ul>
+      </div>
+
+      <div class="experience-card">
+        <h3>
+          Tools & Concepts
+        </h3>
+        <ul class="skill-list">
+          <li>Version Control (Git, Github)</li>
+          <li>Client-Server Artchitecture</li>
+          <li>API Development (Postman)</li>
+          <li>Unit Testing (Jest/jUnit)</li>
+          <li>Visual Studio Code</li>
+          <li>IntelliJ IDEA</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+  <!-- ! End of Experience section -->
+
+  <!-- ! Start of Projects section -->
+  <section id="projects" class="section-padding">
+    <h2>
+      Projects
+    </h2>
+
+    <div class="projects-grid">
+      <div class="projects-card">
+        <div class="projects-image"> Project 1 </div>
+        <div class="projects-details">
+          <h3>
+            Capstone project
+          </h3>
+          <p>
+            Developed a dynamic, product cart application with authentication and checkout features.
+          </p>
+          <div class="projects-links">
+            <a href="#">Demo</a>
+            <a href="#">Github Repo</a>
+          </div>
+        </div>
+
+        <div class="projects-card">
+          <div class="projects-image">Project 2</div>
+          <div class="projects-details">
+            <h3>
+              Online Portfolio
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, unde.
+            </p>
+            <div class="projects-links">
+              <a href="#">Demo</a>
+              <a href="#">Github Repo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects-card">
+          <div class="projects-image"> Project 3 </div>
+          <div class="projects-details">
+            <h3>
+              Personal Project
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, unde.
+            </p>
+            <div class="projects-links">
+              <a href="#">Demo</a>
+              <a href="#">Github Repo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- ! End of Projects section -->
+
+  <!-- ! Start of Contact section -->
+  <section id="contact" class="section-padding">
+    <h2>Contact Me</h2>
+    <p>Lets connect!</p>
+    <div class="contact-links">
+      <a href="mailto:mikistudio21@gmail.com"> Email Me </a>
+      <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"
+        target="_blank"><span>X</span>Linkedin
+        Profile</a>
+    </div>
+  </section>
+  <!-- ! End of Contact section -->
+
+  <!-- ! Start of Footer -->
+  <!-- <section id="footer" class="section-padding">   -->
+  <footer id="footer" class="section-padding">
+    <div class="footer-nav">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contacts</a>
+    </div>
+    <p class="copyright">&copy; 2025 Muhammad Khairi. All rights reserved.</p>
+  </footer>
+  <!-- ! End of Footer -->
+
+
+</body>
+
 </html>

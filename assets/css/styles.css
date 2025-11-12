@@ -2,11 +2,12 @@
     /* CSS variables for easy theme management */
     /* SINGLE SOURCE OF TRUTH */
     :root {
-    --primary-color: #1a1a1a;
-    --secondary-color: #6c757d;
-    --accent-color: #4CAF50; /* A touch of green for accents */
-    --light-bg-color: #f8f9fa;
-    --white: #ffffff;
+    --primary-color: #1d1d1f;
+    --secondary-color: #435663;
+    --accent-color: #A3B087; /* A touch of green for accents */
+    --light-bg-color: #FFF;
+    --white2: #FFFFFF;
+    --white: #e8e8ed;
     --border-radius: 0.5rem; /* Converted from 8px */
     --transition-speed: 0.3s;
     /* Optional: Set base font size for easier rem calculations (e.g., 62.5% = 10px) */
@@ -22,15 +23,21 @@
     }
 
     body {
-      font-family: "Lato", sans-serif;
+      font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
       line-height: 1.6;
       color: var(--primary-color);
       /* For text color in <body> except text for hyperlink */
       background-color: var(--white);
       scroll-behavior: smooth;
+      letter-spacing: -.022em;
     }
 
     /* Reuseable Components */
+    html{
+
+    scroll-behavior: smooth;
+
+}
 
     /* Class selector has a DOT */
     .section-padding {
@@ -60,7 +67,7 @@
       /* To set vertical alignment */
       padding: 0.9375rem 1.25rem;
       /* Top & Bottom = 15px, Left & Right = 20px */
-      background-color: var(--white);
+      background-color: var(--white2);
       box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
       position: sticky;
       /* To set it to STUCK at top of page (sticky, absolute OR relative) */
@@ -140,7 +147,7 @@
       border-radius: var(--border-radius);
       font-weight: 600;
       transition: all var(--transition-speed);
-      border: 0.125rem solid var(--primary-color);
+      border: 0.08rem solid var(--primary-color);
       /* Converted from 2px */
     }
 
@@ -299,7 +306,8 @@
 .project-card {
     flex-basis: calc(33.333% - 1.25rem); /* Converted from 20px */
     min-width: 17.5rem; /* Converted from 280px */
-    background-color: var(--white);
+    /* background-color: var(--white); */
+    background-color: var(--white2);
     border-radius: var(--border-radius);
     box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.1); /* Converted from 0 4px 15px */
     overflow: hidden;
@@ -374,7 +382,7 @@
       align-items: center;
       padding: 0.75rem 1.5625rem;
       margin: 0 0.9375rem;
-      border: 0.125rem solid var(--primary-color);
+      border: 0.08rem solid var(--primary-color);
       border-radius: var(--border-radius);
       text-decoration: none;
       color: var(--primary-color);

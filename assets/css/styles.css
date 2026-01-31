@@ -4,7 +4,7 @@
     :root {
     --primary-color: #1d1d1f;
     --secondary-color: #435663;
-    --accent-color: #A3B087; /* A touch of green for accents */
+    --accent-color: #2997ff; /* A touch of green for accents */
     --light-bg-color: #FFF;
     --white2: #FFFFFF;
     --white: #e8e8ed;
@@ -34,7 +34,6 @@
 
     /* Reuseable Components */
     html{
-
     scroll-behavior: smooth;
 
 }
@@ -54,6 +53,7 @@
     h2 {
       font-size: 2.5rem;
       text-align: center;
+      margin: auto;
       margin-bottom: 3.75rem;
       color: var(--primary-color);
     }
@@ -111,30 +111,30 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 1.25rem;
-      padding: 1.25rem;
+      
     }
 
     .profile-pic-large {
-      width: 9.375rem;
+      width: 15rem;
       /* 150px */
-      height: 9.375rem;
+      height: 15rem;
       border-radius: 50%;
       /* Default is a SQUARE. To become circle. add % TL TR BL BR */
       object-fit: cover;
-      border: 0.2rem solid var(--primary-color);
-      margin-bottom: 0.625rem;
+      border: 0.1rem solid var(--primary-color);
+      margin-bottom: 0rem;
     }
 
     .landing-content h1 {
       font-size: 3.75rem;
       font-weight: 700;
+      margin: auto;
     }
 
     .landing-content p {
       font-size: 1.2rem;
       color: var(--secondary-color);
-      margin-bottom: 1.25rem;
+      margin-bottom: 2rem;
     }
 
     .cta-group a {
@@ -147,12 +147,12 @@
       border-radius: var(--border-radius);
       font-weight: 600;
       transition: all var(--transition-speed);
-      border: 0.08rem solid var(--primary-color);
+      /* border: 0.08rem solid var(--primary-color); */
       /* Converted from 2px */
     }
 
     .primary-cta {
-      background-color: var(--primary-color);
+      background-color: #2997ff;
       color: var(--white);
     }
 
@@ -171,6 +171,7 @@
     .secondary-cta:hover {
       background-color: var(--primary-color);
       color: var(--white);
+      box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
     }
 
 
@@ -292,15 +293,15 @@
       /* Convert from 10px */
     }
 
-
-
-
     /* Style for Projects */
     .projects-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.875rem; /* Converted from 30px */
-    justify-content: center;
+    display: grid;
+    width: auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 2rem;
+    margin: 0 1rem 1rem;
+   
 }
 
 .project-card {
@@ -322,8 +323,7 @@
   background-position: center center;
   background-size: cover;
   object-fit: cover;
-  background-image: url("https://placehold.co/100x100/orange/white?text=Image Placeholder"
- );
+  background-image: url("https://placehold.co/100x100/orange/white?text=Image Placeholder");
 }
 
 .project-card:hover {
@@ -347,7 +347,7 @@
 
 .project-details h3 {
     font-size: 1.5rem; /* Converted from 1.5em */
-    margin-bottom: 0.625rem; /* Converted from 10px */
+    margin: auto;
     text-align: left;
 }
 
@@ -382,17 +382,19 @@
       align-items: center;
       padding: 0.75rem 1.5625rem;
       margin: 0 0.9375rem;
-      border: 0.08rem solid var(--primary-color);
+      /* border: 0.08rem solid var(--primary-color); */
       border-radius: var(--border-radius);
       text-decoration: none;
-      color: var(--primary-color);
       font-weight: 600;
+      background-color: var(--white);
+      color: var(--primary-color);
       transition: all var(--transition-speed);
     }
 
     .contact-links a:hover {
       background-color: var(--primary-color);
       color: var(--white);
+      box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
     }
 
     .contact-links a span {

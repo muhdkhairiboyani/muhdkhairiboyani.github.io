@@ -1,6 +1,6 @@
     /* insert styles here */
     /* CSS variables for easy theme management */
-   
+
     /* */
     :root {
       --primary-color: #1d1d1f;
@@ -34,11 +34,15 @@
       background-color: var(--white);
       scroll-behavior: smooth;
       letter-spacing: -.022em;
+      margin: 0;
+      /* padding: 0; */
     }
 
     /* Reuseable Components */
     html {
       scroll-behavior: smooth;
+      /* margin: 0; */
+      /* padding: 0; */
 
     }
 
@@ -50,8 +54,6 @@
       /* Padding 1200px */
       margin: 0 auto;
       /* Top & Bottom = 0px, Left & Right = Flushed */
-
-
     }
 
     /* Target Tag selector */
@@ -62,6 +64,9 @@
       margin-bottom: 3.75rem;
       color: var(--primary-color);
     }
+
+
+
 
     /* Target Tag element <nav> */
     nav {
@@ -116,7 +121,6 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-
     }
 
     .profile-pic-large {
@@ -183,7 +187,8 @@
 
     /* Style for About Me */
     #about {
-      background-color: var(--white);
+      background-color: var(--light-bg-color);
+      border-radius: 2rem;
     }
 
     .about-grid {
@@ -199,9 +204,9 @@
 
     .about-image img {
       width: 100%;
-      max-width: 18.75rem;
+      max-width: 21.3rem;
       border-radius: var(--border-radius);
-  
+
     }
 
     .about-text {
@@ -239,9 +244,9 @@
     }
 
     /* Style for Experience */
-    #experience {
-      background-color: var(--light-bg-color);
-    }
+    /* #experience { */
+    /* background-color: var(--light-bg-color); */
+    /* } */
 
     /*   .experience-grid {
       display: flex;
@@ -259,7 +264,7 @@
       flex: 1;
       min-width: 18.75rem;
       padding: 1.875rem;
-      background-color: var(--white);
+      background-color: var(--light-bg-color);
       border-radius: var(--border-radius);
       box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.05);
       text-align: center;
@@ -566,8 +571,6 @@
     @media(max-width: 37.5rem) {
       /* Apply the styles here if the screen is <= 600px (16px x 37.5rem) */
 
-
-
       /* wrap <nav> bar */
       nav {
         flex-wrap: wrap;
@@ -587,4 +590,14 @@
       .footer-nav a {
         font-size: 0.8rem;
       }
+
+      .about-image img {
+        width: 100%;
+        max-width: 18.5rem;
+        border-radius: var(--border-radius);
+
+      }
+
+
+
     }

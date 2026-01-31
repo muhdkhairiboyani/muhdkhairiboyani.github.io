@@ -607,7 +607,7 @@
     }
 
     /* Responsive styles for the web page Design */
-    @media(max-width: 24rem) {
+    @media(max-width: 24.375rem) {
       /* Apply the styles here if the screen is <= 600px (16px x 37.5rem) */
 
       /* wrap <nav> bar */

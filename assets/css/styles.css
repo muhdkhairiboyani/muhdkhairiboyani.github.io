@@ -581,9 +581,6 @@
       }
 
       /* TODO - DONE - fix responsive layout for skills-list li */
-      .skill-list li {
-        width: 100%;
-      }
 
       .projects-card {
         flex-basis: 100%;
@@ -593,10 +590,24 @@
         grid-template-columns: repeat(1, 1fr);
       }
 
+      .skill-list {
+        justify-content: center;
+        /* Center the list */
+      }
+
+      .skill-list li {
+        width: 100%;
+        /* One item per row */
+        justify-content: flex-start;
+        /* Center icon + text */
+        text-align: center;
+        padding-left: 9rem;
+      }
+
     }
 
     /* Responsive styles for the web page Design */
-    @media(max-width: 37.5rem) {
+    @media(max-width: 24rem) {
       /* Apply the styles here if the screen is <= 600px (16px x 37.5rem) */
 
       /* wrap <nav> bar */
@@ -624,6 +635,20 @@
         max-width: 18.5rem;
         border-radius: var(--border-radius);
 
+      }
+
+      .skill-list {
+        justify-content: center;
+        /* Center the list */
+      }
+
+      .skill-list li {
+        width: 100%;
+        /* One item per row */
+        justify-content: flex-start;
+        /* Center icon + text */
+        text-align: center;
+        padding-left: 6rem;
       }
 
 

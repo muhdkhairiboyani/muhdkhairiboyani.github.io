@@ -607,7 +607,7 @@
     }
 
     /* Responsive styles for the web page Design */
-    @media(max-width: 24.375rem) {
+    @media(max-width: 26.875rem) {
       /* Apply the styles here if the screen is <= 600px (16px x 37.5rem) */
 
       /* wrap <nav> bar */
@@ -648,7 +648,7 @@
         justify-content: flex-start;
         /* Center icon + text */
         text-align: center;
-        padding-left: 6rem;
+        padding-left: 7.3rem;
       }
 
 

@@ -289,30 +289,37 @@
     }
 
     .skill-list {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      text-align: left;
-      margin-top: 0.9375rem;
-      /* Convert from 15px */
-    }
+  list-style: none;          /* Remove default bullets */
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  margin-top: 0.9375rem;     /* 15px */
+  padding: 0;                /* Remove default UL padding */
+}
 
-    .skill-list li {
-      width: cal(50% - 0.625rem);
-      /* Convert from 10px */
-      margin-bottom: 0.9375rem;
-      font-weight: 400;
-      display: flex;
-      align-items: center;
-    }
+.skill-list li {
+  width: calc(50% - 0.625rem); /* 50% width minus gap */
+  margin-bottom: 0.9375rem;    /* 15px */
+  font-weight: 400;
+  display: flex;               /* Align icon + text */
+  align-items: center;         /* Vertically center */
+  gap: 0.625rem;               /* Space between icon and text */
+}
 
-    .skill-list li::before {
-      content: "•";
-      color: var(--accent-color);
-      font-size: 1.2rem;
-      margin-right: 0.625rem;
-      /* Convert from 10px */
-    }
+.skill-list li i,
+.skill-list li img.skill-icon {
+  width: 24px;           /* Icon width */
+  height: 24px;          /* Icon height */
+  font-size: 24px;       /* For Font Awesome icons */
+  display: inline-block; /* Ensure spacing works for both i & img */
+}
+
+    .skill-list li i,
+.skill-list li img.skill-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
 
 
     /* Style for Projects */
